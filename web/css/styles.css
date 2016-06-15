@@ -1,0 +1,90 @@
+/*=============================*\
+		   STYLE GLOBAL
+\*=============================*/
+html {
+	min-height: 100vh;
+}
+body {
+	min-height: 100vh;
+	background-color: #FEFCFF;
+}
+.wrapper {
+	position: relative;
+	min-height: 100vh;
+	padding: 0 !important;
+}
+.wrapper > nav + div {
+	padding: 30px 0 ;
+}
+/* Class qui supprime les marges negative de bootsrap */
+.marg-row {
+	margin: 0 !important;
+}
+/* Class qui supprime les paddings de bootsrap */
+.padd-row {
+	padding: 0 !important;
+}
+
+/*=============================*\
+		  MENU ACCUEIL
+\*=============================*/
+nav.navbar-default {
+	height: 70px;
+	background-color: #F0F0F0;
+	padding: 0 ;
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	border-bottom: solid #3B3C3D 4px;
+	border-top: solid #3B3C3D 1px;
+}
+nav > div.container-fluid {
+	height: 100%;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+nav > div > div.navbar-header {
+	height: 100%;
+	width: auto;
+	margin: 0 !important;
+}
+.navbar-header button {
+	margin: 15.5px 20px;
+}
+nav > div > div.navbar-header a{
+	display: block;
+	margin: 8px 0 !important;
+}
+nav > div > div >.nav-logo {
+	padding: 0px 40px;
+}
+#navbar {
+	width: 100%;
+	padding: 0 !important;
+	margin: 0 !important;
+	border-top: none !important;
+}
+#navbar > ul.nav {
+	margin: 0 !important;
+}
+#navbar > ul.nav,
+#navbar > ul.nav > li {
+	height: 100%;
+}
+#navbar > ul.nav > li > a {
+	display: inline-block;
+	height: 100%;
+	line-height: 65px;
+	padding: 0 30px;
+	color: #3B3C3D !important;
+	font-size: 1.2em;
+}
+#navbar > ul.nav > li > a span {
+	margin-right: 10px;
+}
+#navbar > ul.nav > li > a:hover {
+	color: #ECF0F1 !important;
+	background-color: #3B3C3D !important;
+}
