@@ -1,0 +1,407 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+/**
+ * Voyage
+ *
+ * @ORM\Table(name="voyage")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\VoyageRepository")
+ */
+class Voyage
+{
+    /**
+     * @ORM\ManyToMany(targetEntity="Groupe", inversedBy="voyages")
+     * @ORM\JoinTable(name="voyages_groupes")
+     */
+    private $groupes;
+
+    public function __construct() {
+        $this->groupes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pays", type="string", length=255)
+     */
+    private $pays;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ville", type="string", length=255)
+     */
+    private $ville;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adr_depart", type="string", length=255)
+     */
+    private $adrDepart;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adr_arriver", type="string", length=255)
+     */
+    private $adrArriver;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dte_depart", type="datetime")
+     */
+    private $dteDepart;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="tps_sejour", type="smallint")
+     */
+    private $tpsSejour;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prix_food", type="decimal", precision=9, scale=0)
+     */
+    private $prixFood;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prix_loge", type="decimal", precision=9, scale=0)
+     */
+    private $prixLoge;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="locomotion", type="array")
+     */
+    private $locomotion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="commentaire", type="text")
+     */
+    private $commentaire;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set pays
+     *
+     * @param string $pays
+     * @return Voyage
+     */
+    public function setPays($pays)
+    {
+        $this->pays = $pays;
+
+        return $this;
+    }
+
+    /**
+     * Get pays
+     *
+     * @return string 
+     */
+    public function getPays()
+    {
+        return $this->pays;
+    }
+
+    /**
+     * Set ville
+     *
+     * @param string $ville
+     * @return Voyage
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return string 
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * Set adrDepart
+     *
+     * @param string $adrDepart
+     * @return Voyage
+     */
+    public function setAdrDepart($adrDepart)
+    {
+        $this->adrDepart = $adrDepart;
+
+        return $this;
+    }
+
+    /**
+     * Get adrDepart
+     *
+     * @return string 
+     */
+    public function getAdrDepart()
+    {
+        return $this->adrDepart;
+    }
+
+    /**
+     * Set adrArriver
+     *
+     * @param string $adrArriver
+     * @return Voyage
+     */
+    public function setAdrArriver($adrArriver)
+    {
+        $this->adrArriver = $adrArriver;
+
+        return $this;
+    }
+
+    /**
+     * Get adrArriver
+     *
+     * @return string 
+     */
+    public function getAdrArriver()
+    {
+        return $this->adrArriver;
+    }
+
+    /**
+     * Set dteDepart
+     *
+     * @param \DateTime $dteDepart
+     * @return Voyage
+     */
+    public function setDteDepart($dteDepart)
+    {
+        $this->dteDepart = $dteDepart;
+
+        return $this;
+    }
+
+    /**
+     * Get dteDepart
+     *
+     * @return \DateTime 
+     */
+    public function getDteDepart()
+    {
+        return $this->dteDepart;
+    }
+
+    /**
+     * Set tpsSejour
+     *
+     * @param integer $tpsSejour
+     * @return Voyage
+     */
+    public function setTpsSejour($tpsSejour)
+    {
+        $this->tpsSejour = $tpsSejour;
+
+        return $this;
+    }
+
+    /**
+     * Get tpsSejour
+     *
+     * @return integer 
+     */
+    public function getTpsSejour()
+    {
+        return $this->tpsSejour;
+    }
+
+    /**
+     * Set prixFood
+     *
+     * @param string $prixFood
+     * @return Voyage
+     */
+    public function setPrixFood($prixFood)
+    {
+        $this->prixFood = $prixFood;
+
+        return $this;
+    }
+
+    /**
+     * Get prixFood
+     *
+     * @return string 
+     */
+    public function getPrixFood()
+    {
+        return $this->prixFood;
+    }
+
+    /**
+     * Set prixLoge
+     *
+     * @param string $prixLoge
+     * @return Voyage
+     */
+    public function setPrixLoge($prixLoge)
+    {
+        $this->prixLoge = $prixLoge;
+
+        return $this;
+    }
+
+    /**
+     * Get prixLoge
+     *
+     * @return string 
+     */
+    public function getPrixLoge()
+    {
+        return $this->prixLoge;
+    }
+
+    /**
+     * Set locomotion
+     *
+     * @param array $locomotion
+     * @return Voyage
+     */
+    public function setLocomotion($locomotion)
+    {
+        $this->locomotion = $locomotion;
+
+        return $this;
+    }
+
+    /**
+     * Get locomotion
+     *
+     * @return array 
+     */
+    public function getLocomotion()
+    {
+        return $this->locomotion;
+    }
+
+    /**
+     * Set commentaire
+     *
+     * @param string $commentaire
+     * @return Voyage
+     */
+    public function setCommentaire($commentaire)
+    {
+        $this->commentaire = $commentaire;
+
+        return $this;
+    }
+
+    /**
+     * Get commentaire
+     *
+     * @return string 
+     */
+    public function getCommentaire()
+    {
+        return $this->commentaire;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     * @return Voyage
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Add groupes
+     *
+     * @param \AppBundle\Entity\Groupe $groupes
+     * @return Voyage
+     */
+    public function addGroupe(\AppBundle\Entity\Groupe $groupes)
+    {
+        $this->groupes[] = $groupes;
+
+        return $this;
+    }
+
+    /**
+     * Remove groupes
+     *
+     * @param \AppBundle\Entity\Groupe $groupes
+     */
+    public function removeGroupe(\AppBundle\Entity\Groupe $groupes)
+    {
+        $this->groupes->removeElement($groupes);
+    }
+
+    /**
+     * Get groupes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getGroupes()
+    {
+        return $this->groupes;
+    }
+}
