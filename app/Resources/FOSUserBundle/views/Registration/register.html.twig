@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
+
 {% block menu %}{% include 'menu/menu.html.twig' %}{% endblock %}
-{% block slider %}{% include 'slider/slider.html.twig' %}{% endblock %}
-{% block body %}{% include 'skyscanner/scanner.html.twig' %}{% endblock %}
+
+{% block fos_user_content %}
+{% include "FOSUserBundle:Registration:register_content.html.twig" %}
+{% endblock fos_user_content %}
+
 {% block footer %}{% include 'footer/footer.html.twig' %}{% endblock %}
