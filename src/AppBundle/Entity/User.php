@@ -56,8 +56,6 @@ class User extends BaseUser
 
         return $this;
     }
-<<<<<<< HEAD
-=======
 
     /**
      * Get name
@@ -114,5 +112,5 @@ class User extends BaseUser
     {
         return $this->birthday;
     }
->>>>>>> dev
+
 }
