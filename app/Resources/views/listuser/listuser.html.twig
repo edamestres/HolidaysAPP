@@ -1,0 +1,30 @@
+<div class="chat-panel panel panel-default">
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        {% for user in users %}
+        <ul class="chat">
+            <li class="left clearfix">
+                <span class="chat-img pull-left">
+                    <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
+                </span>
+                <div class="chat-body clearfix">
+                <h4>{{ user.name |capitalize ~ " " ~ user.lastname }}</h4>    
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+    <!-- /.panel-body -->
+    <div class="panel-footer">
+        <div class="input-group">
+            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Rechercher des amis" />
+            <span class="input-group-btn">
+                <button class="btn btn-warning btn-sm" id="btn-chat">
+                Rechercher
+                </button>
+            </span>
+        </div>
+    </div>
+    <!-- /.panel-footer -->
+</div>
+<!-- /.panel .chat-panel -->

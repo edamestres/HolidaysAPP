@@ -41,7 +41,7 @@
     padding:0 !important;
 }
 .ss_box300x250 {
-	margin:40px auto !important;
+	min-width: 100% !important;
 }
 .datepicker {
 	min-width: 268px !important;

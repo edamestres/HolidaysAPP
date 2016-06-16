@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block menu %}{% include 'menu/menu.html.twig' %}{% endblock %}
+{% block body %}
+<div class="row marg-row">
+	<div class="col-lg-3">
+		
+	</div>
+	<div class="col-lg-6">
+		
+	</div>
+	<div class="col-lg-3">
+		{% include 'skyscanner/scanner.html.twig' %}
+		{% include 'listuser/listuser.html.twig' %}
+	</div>
+</div>
+{% endblock %}
+{% block footer %}{% include 'footer/footer.html.twig' %}{% endblock %}
