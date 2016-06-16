@@ -88,3 +88,201 @@ nav > div > div >.nav-logo {
 	color: #ECF0F1 !important;
 	background-color: #3B3C3D !important;
 }
+/*============================*\
+		    CAROUSEL
+\*============================*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+.item:nth-child(1) {
+    background: url(https://ununsplash.imgix.net/photo-1417021423914-070979c8eb34?q=75&fm=jpg&s=55746bd56e02a131b1e48c12196ea866) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.item:nth-child(2) {
+    background: url(http://localhost/SymfonyAll/wildrando/web/wildrandoImages/background-accueil.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.item:nth-child(3) {
+    background: url(http://localhost/SymfonyAll/wildrando/web/wildrandoImages/Aiguille.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.carousel {
+    z-index: -99;
+}
+.carousel .item {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.title {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  text-shadow: 2px 2px #000;
+  color: #FFF;
+}
+/*=============================*\
+		     FOOTER
+\*=============================*/
+footer.container-footer {
+	position: absolute;
+	top: calc(100% - 58px);
+	width:100%;
+	background-color: #F4D35D ;
+	border-top: solid #3B3C3D 4px;
+}
+footer.container-footer div.footer {
+	text-align: center;
+	padding-top: 14px;
+	padding-bottom: 10px;
+}
+footer.container-footer div.footer .footer-copyright {
+	font-weight: bold;
+	letter-spacing: 0.1em;
+}
+/*=============================*\
+		     LOGIN
+\*=============================*/
+.wrapp-login {
+	margin: 0 !important;
+}
+form.form-login {
+	margin-top: 80px;
+}
+.login {
+	width: 100%;
+	background-color: #F4D35D;
+	color: #000000;
+	border: 1px #000000 solid;
+}
+.remember-me {
+	width: 100%;
+	height: 34px;
+	line-height: 32px;
+	margin: 0;
+	padding-left: 20px;
+	border: #D1D5D8 1px solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+/*=============================*\
+		    MESSAGE
+\*=============================*/
+.chat {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.chat li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #999;
+}
+
+.chat li.left .chat-body {
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body {
+    margin-right: 60px;
+}
+
+.chat li .chat-body p {
+    margin: 0;
+}
+.chat-body h4 {
+	line-height: 50px;
+	margin: 0 0 0 40px;
+}
+
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+    margin-right: 5px;
+}
+
+.chat-panel .panel-body {
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.login-panel {
+    margin-top: 25%;
+}
+
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+
+.flot-chart-content {
+    width: 100%;
+    height: 100%;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+}
+.panel-footer {
+	background-color: #c6d733 !important;
+}
+.panel-body {
+	border-right: solid 3px #fba41f;
+	border-left: solid 3px #fba41f;
+	border-top: solid 3px #fba41f;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
