@@ -178,6 +178,7 @@ html {
 \*=============================*/
 footer.container-footer {
 	position: absolute;
+	margin-top: 100px;
 	top: calc(100% - 58px);
 	width:100%;
 	background-color: #F4D35D ;
