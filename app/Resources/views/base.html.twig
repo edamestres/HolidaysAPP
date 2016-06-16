@@ -10,12 +10,16 @@
         {% block javascripts %}
         <script type="text/javascript" src="{{ asset('/js/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/js/app.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/js/npm.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/js/bootsrap.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/js/bootstrap.js') }}"></script>
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         <div class="container-fluid wrapper">
-            {% block menu %}{% endblock %}   
+            {% block menu %}{% endblock %}
+            {% block slider %}{% endblock %}
             {% block body %}{% endblock %}
             {% block footer %}{% endblock %}
         </div>
