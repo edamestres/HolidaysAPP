@@ -137,29 +137,9 @@ html {
         transform: translate3d(0, 0, 0);
     }
 }
-.item:nth-child(1) {
-    background: url(https://ununsplash.imgix.net/photo-1417021423914-070979c8eb34?q=75&fm=jpg&s=55746bd56e02a131b1e48c12196ea866) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.item:nth-child(2) {
-    background: url(http://localhost/SymfonyAll/wildrando/web/wildrandoImages/background-accueil.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.item:nth-child(3) {
-    background: url(http://localhost/SymfonyAll/wildrando/web/wildrandoImages/Aiguille.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+
 .carousel {
-    z-index: -99;
+    z-index: 999;
 }
 .carousel .item {
     position: fixed;
@@ -286,4 +266,11 @@ form.form-login {
 	border-top: solid 3px #fba41f;
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
+}
+
+body{
+	background-image: url("../images/surf.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }

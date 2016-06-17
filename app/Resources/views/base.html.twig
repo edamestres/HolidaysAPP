@@ -14,6 +14,7 @@
             <script type="text/javascript" src="{{ asset('/js/npm.js') }}"></script>
             <script type="text/javascript" src="{{ asset('/js/bootstrap.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('/js/bootstrap.js') }}"></script>
+            <script src="https://use.fontawesome.com/13832b1e80.js"></script>
         <script type="text/javascript" src="//api.skyscanner.net/api.ashx?key=01569c07-351b-4a42-ad1a-08e51044ec3d"></script>
         <script type="text/javascript">
            skyscanner.load("snippets","2");
@@ -35,9 +36,12 @@
     <body>
         <div class="container-fluid wrapper">
             {% block menu %}{% endblock %}
-            {% block slider %}{% include 'slider/slider.html.twig' %}{% endblock %}
+
+            {% include 'slider/slider.html.twig' %}
+
             {% block body %}{% endblock %}
-            {% block fos_user_content %}{% endblock %} 
+            {% block fos_user_content %}{% endblock %}
+            {% block description %}{% include 'description/description.html.twig' %}{% endblock %}
             {% block footer %}{% endblock %}
         </div>
     </body>
