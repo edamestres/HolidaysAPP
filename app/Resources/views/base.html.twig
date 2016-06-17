@@ -31,8 +31,8 @@
     </head>
     <body>
         <div class="container-fluid wrapper">
+            {% block menu %}{% endblock %}
             {% block slider %}{% include 'slider/slider.html.twig' %}{% endblock %}
-            {% block menu %}{% endblock %} 
             {% block body %}{% endblock %}
             {% block fos_user_content %}{% endblock %} 
             {% block footer %}{% endblock %}
